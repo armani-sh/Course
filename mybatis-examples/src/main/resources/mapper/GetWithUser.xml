@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mybatisexamples.example01.GetWithUser">
+    <resultMap id="getWithUser" type="com.example.mybatisexamples.entity.DetailWithUser">
+        <result column="id" property="id" />
+        <result column="detail" property="detail" />
+        <association property="user"
+                     columnPrefix="u_"
+                     javaType="com.example.mybatisexamples.entity.User" autoMapping="true" />
+    </resultMap>
+    <select id="ListDetailWithUser" resultMap="getWithUser">
+        select a.*,u.id u_id,u.name u_name
+               from address a join user u on a.userid=u.id where a.id=#{id}
+    </select>
+</mapper>
