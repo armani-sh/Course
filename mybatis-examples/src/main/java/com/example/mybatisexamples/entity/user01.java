@@ -6,4 +6,7 @@ public class user01 {
         int y=10/0;
         int z=10+20;
     }
+    public void get(){
+        System.out.printf("001");
+    }
 }
