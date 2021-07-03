@@ -22,7 +22,6 @@ public class UsersTest {
         Users user=new Users();
         user.setName("ShuHang");
         entityManager.persist(user);
-
     }
 
 

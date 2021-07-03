@@ -1,10 +1,7 @@
 package com.example.mybatisexamples.entity;
 
 
-import com.example.mybatisexamples.example01.AdressMapper;
-import com.example.mybatisexamples.example01.GetWithUser;
-import com.example.mybatisexamples.example01.GetWithdetail;
-import com.example.mybatisexamples.example01.Usermapper;
+import com.example.mybatisexamples.example01.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -78,4 +75,5 @@ public class UserTest {
             log.debug("{}",du);
         }
     }
+
 }
